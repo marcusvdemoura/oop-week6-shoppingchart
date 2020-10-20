@@ -6,6 +6,8 @@ import java.util.HashMap;
 public class Check_Out{
     private Products products;
    public static HashMap<Integer, Integer> list_of_products = new HashMap <Integer, Integer>();
+   public final double priceApple = 0.6;
+   public final double priceOrange = 0.25;
    private double finalPrice;
 
     public Check_Out(Products products) {
@@ -29,7 +31,7 @@ public class Check_Out{
     }
 
     public void final_Price (){
-        double finalPrice = (products.getOranges()*0.25) +(products.getApples() * 0.60);
+        double finalPrice = (products.getOranges()*priceOrange) +(products.getApples() * priceApple);
         this.finalPrice = finalPrice;
         System.out.println("The final price for the shopping is: " + finalPrice);
     }
